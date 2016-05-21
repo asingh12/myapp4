@@ -6,7 +6,8 @@ class UsersController < ApplicationController
 
 
   def index
-  	#@users = User.paginate(page: params[:page])
+  	@users = User.where('').paginate(page: params[:page])
+
   end
 
   def show
@@ -21,7 +22,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       log_in @user
-      flash[:success] = "Welcome to the Sample App!"
+      flash[:success] = "Welcome to Comp 405 Final App!"
       redirect_to @user
     else
       render 'new'
