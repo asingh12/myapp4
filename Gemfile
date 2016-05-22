@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem 'rails'                   
 gem 'bcrypt'                  
 gem 'faker'                   
-gem 'carrierwave'             
+            
 gem 'mini_magick'             
 gem 'fog'                     
 gem 'will_paginate'           
