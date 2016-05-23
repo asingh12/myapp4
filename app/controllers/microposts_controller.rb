@@ -25,6 +25,7 @@ class MicropostsController < ApplicationController
   # POST /microposts
   # POST /microposts.json
   def create
+<<<<<<< HEAD
     @micropost = Micropost.new(micropost_params)
 
     respond_to do |format|
@@ -37,8 +38,18 @@ class MicropostsController < ApplicationController
         format.html { render :new }
         format.json { render json: @micropost.errors, status: :unprocessable_entity }
       end
+=======
+    @micropost = current_user.microposts.build(micropost_params)
+    if @micropost.save
+      flash[:success] = "Micropost created!"
+      redirect_to root_url
+    else
+      @feed_items = []
+      render 'static_pages/home'
+>>>>>>> 250a0a5431064f8a84c90dbc077dd456a4582a14
     end
   end
+
 
   # PATCH/PUT /microposts/1
   # PATCH/PUT /microposts/1.json
@@ -60,8 +71,11 @@ class MicropostsController < ApplicationController
     @micropost.destroy
     flash[:success] = "Micropost deleted"
     redirect_to request.referrer || root_url
+<<<<<<< HEAD
 
     end
+=======
+>>>>>>> 250a0a5431064f8a84c90dbc077dd456a4582a14
   end
 
   private
@@ -72,7 +86,13 @@ class MicropostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def micropost_params
-      params.require(:micropost).permit(:content, :user_id)
+      params.require(:micropost).permit(:content, :picture)
+    end
+
+
+    def correct_user
+      @micropost = current_user.microposts.find_by(id: params[:id])
+      redirect_to root_url if @micropost.nil?
     end
 
     def correct_user

@@ -1,7 +1,17 @@
+<<<<<<< HEAD
 <li id="<%= micropost.id %>">
   <%= link_to gravatar_for(micropost.user, size: 50), micropost.user %>
   <span class="user"><%= link_to micropost.user.name, micropost.user %></span>
   <span class="content"><%= micropost.content %></span>
+=======
+<li id="micropost-<%= micropost.id %>">
+  <%= link_to gravatar_for(micropost.user, size: 50), micropost.user %>
+  <span class="user"><%= link_to micropost.user.name, micropost.user %></span>
+  <span class="content">
+    <%= micropost.content %>
+    <%= image_tag micropost.picture.url if micropost.picture? %>
+  </span>
+>>>>>>> 250a0a5431064f8a84c90dbc077dd456a4582a14
   <span class="timestamp">
     Posted <%= time_ago_in_words(micropost.created_at) %> ago.
     <% if current_user?(micropost.user) %>
@@ -9,5 +19,9 @@
                                        data: { confirm: "You sure?" } %>
     <% end %>
   </span>
+<<<<<<< HEAD
 </li>
 
+=======
+</li>
+>>>>>>> 250a0a5431064f8a84c90dbc077dd456a4582a14

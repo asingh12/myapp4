@@ -33,4 +33,9 @@ class MicropostsInterfaceTest < ActionDispatch::IntegrationTest
     get user_path(users(:archer))
     assert_select 'a', text: 'delete', count: 0
   end
+<<<<<<< HEAD
 end
+=======
+end
+
+>>>>>>> 250a0a5431064f8a84c90dbc077dd456a4582a14
