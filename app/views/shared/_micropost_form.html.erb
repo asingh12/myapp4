@@ -2,7 +2,7 @@
 <%= form_for(@micropost) do |f| %>
 
 <%= form_for(@micropost, html: { multipart: true }) do |f| %>
->>>>>>> 250a0a5431064f8a84c90dbc077dd456a4582a14
+
   <%= render 'shared/error_messages', object: f.object %>
   <div class="field">
     <%= f.text_area :content, placeholder: "Compose new micropost..." %>
@@ -25,4 +25,4 @@
     }
   });
 </script>
->>>>>>> 250a0a5431064f8a84c90dbc077dd456a4582a14
+

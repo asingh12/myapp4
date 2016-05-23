@@ -11,7 +11,7 @@
     <%= micropost.content %>
     <%= image_tag micropost.picture.url if micropost.picture? %>
   </span>
->>>>>>> 250a0a5431064f8a84c90dbc077dd456a4582a14
+
   <span class="timestamp">
     Posted <%= time_ago_in_words(micropost.created_at) %> ago.
     <% if current_user?(micropost.user) %>
@@ -24,4 +24,4 @@
 
 
 </li>
->>>>>>> 250a0a5431064f8a84c90dbc077dd456a4582a14
+

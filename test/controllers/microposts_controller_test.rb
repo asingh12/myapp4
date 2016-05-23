@@ -63,7 +63,7 @@ class MicropostsControllerTest < ActionController::TestCase
 
 
 
->>>>>>> 250a0a5431064f8a84c90dbc077dd456a4582a14
+
   test "should redirect destroy for wrong micropost" do
     log_in_as(users(:michael))
     micropost = microposts(:ants)
@@ -73,5 +73,5 @@ class MicropostsControllerTest < ActionController::TestCase
     assert_redirected_to root_url
   end
 
->>>>>>> 250a0a5431064f8a84c90dbc077dd456a4582a14
+
 end

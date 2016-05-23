@@ -6,7 +6,7 @@ class MicropostTest < ActiveSupport::TestCase
     @user = users(:michael)
      @micropost = @user.microposts.build(content: "Lorem ipsum")
 
->>>>>>> 250a0a5431064f8a84c90dbc077dd456a4582a14
+
   end
 
   test "should be valid" do
@@ -37,4 +37,4 @@ end
 
 
 end
->>>>>>> 250a0a5431064f8a84c90dbc077dd456a4582a14
+

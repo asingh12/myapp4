@@ -46,7 +46,7 @@ class MicropostsController < ApplicationController
     else
       @feed_items = []
       render 'static_pages/home'
->>>>>>> 250a0a5431064f8a84c90dbc077dd456a4582a14
+
     end
   end
 
@@ -75,7 +75,7 @@ class MicropostsController < ApplicationController
 
     end
 
->>>>>>> 250a0a5431064f8a84c90dbc077dd456a4582a14
+
   end
 
   private
