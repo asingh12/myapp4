@@ -1,9 +1,9 @@
 class User < ActiveRecord::Base
   has_many :microposts, dependent: :destroy
-<<<<<<< HEAD
 
 
-=======
+
+
 >>>>>>> 250a0a5431064f8a84c90dbc077dd456a4582a14
   attr_accessor :remember_token
   before_save { self.email = email.downcase }

@@ -25,7 +25,7 @@ class MicropostsController < ApplicationController
   # POST /microposts
   # POST /microposts.json
   def create
-<<<<<<< HEAD
+
     @micropost = Micropost.new(micropost_params)
 
     respond_to do |format|
@@ -38,7 +38,7 @@ class MicropostsController < ApplicationController
         format.html { render :new }
         format.json { render json: @micropost.errors, status: :unprocessable_entity }
       end
-=======
+
     @micropost = current_user.microposts.build(micropost_params)
     if @micropost.save
       flash[:success] = "Micropost created!"
@@ -71,10 +71,10 @@ class MicropostsController < ApplicationController
     @micropost.destroy
     flash[:success] = "Micropost deleted"
     redirect_to request.referrer || root_url
-<<<<<<< HEAD
+
 
     end
-=======
+
 >>>>>>> 250a0a5431064f8a84c90dbc077dd456a4582a14
   end
 
