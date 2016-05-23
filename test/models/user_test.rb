@@ -80,5 +80,5 @@ class UserTest < ActiveSupport::TestCase
 
 
 
->>>>>>> 250a0a5431064f8a84c90dbc077dd456a4582a14
+
 end
